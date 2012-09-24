@@ -46,6 +46,16 @@
 			DFA60DDE16110C230018CFDC /* PBXTextBookmark */ = DFA60DDE16110C230018CFDC /* PBXTextBookmark */;
 			DFA60DDF16110C230018CFDC /* PBXBookmark */ = DFA60DDF16110C230018CFDC /* PBXBookmark */;
 			DFA60DE016110C230018CFDC /* PBXTextBookmark */ = DFA60DE016110C230018CFDC /* PBXTextBookmark */;
+			DFA60DEB16110EA90018CFDC /* PBXTextBookmark */ = DFA60DEB16110EA90018CFDC /* PBXTextBookmark */;
+			DFA60DFB16110F440018CFDC /* PBXTextBookmark */ = DFA60DFB16110F440018CFDC /* PBXTextBookmark */;
+			DFA60DFE16110FB30018CFDC /* PBXTextBookmark */ = DFA60DFE16110FB30018CFDC /* PBXTextBookmark */;
+			DFA60E0016110FB30018CFDC /* PBXTextBookmark */ = DFA60E0016110FB30018CFDC /* PBXTextBookmark */;
+			DFA60E0216110FB30018CFDC /* PBXTextBookmark */ = DFA60E0216110FB30018CFDC /* PBXTextBookmark */;
+			DFA60E0616110FC60018CFDC /* PBXTextBookmark */ = DFA60E0616110FC60018CFDC /* PBXTextBookmark */;
+			DFA60E0716110FC60018CFDC /* PBXTextBookmark */ = DFA60E0716110FC60018CFDC /* PBXTextBookmark */;
+			DFA60E0816110FC60018CFDC /* PBXTextBookmark */ = DFA60E0816110FC60018CFDC /* PBXTextBookmark */;
+			DFA60E13161110B80018CFDC /* PBXTextBookmark */ = DFA60E13161110B80018CFDC /* PBXTextBookmark */;
+			DFA60E14161110B80018CFDC /* PBXTextBookmark */ = DFA60E14161110B80018CFDC /* PBXTextBookmark */;
 		};
 		sourceControlManager = DFA60D84161107800018CFDC /* Source Control */;
 		userBuildSettings = {
@@ -95,7 +105,7 @@
 		isSCMEnabled = 0;
 		scmConfiguration = {
 			repositoryNamesForRoots = {
-				"" = "";
+				"" = GoogleCode;
 			};
 		};
 	};
@@ -103,11 +113,19 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	DFA60D89161107B30018CFDC /* BlasWrappers.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 2795}}";
+			sepNavSelRange = "{275, 0}";
+			sepNavVisRange = "{0, 787}";
+			sepNavWindowFrame = "{{15, 4}, {750, 774}}";
+		};
+	};
 	DFA60D8D161107B30018CFDC /* main.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1011, 4472}}";
-			sepNavSelRange = "{8550, 0}";
-			sepNavVisRange = "{8183, 785}";
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 4550}}";
+			sepNavSelRange = "{139, 1}";
+			sepNavVisRange = "{0, 730}";
 		};
 	};
 	DFA60D8F161107B30018CFDC /* minVolume.h */ = {
@@ -191,5 +209,134 @@
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 8183;
+	};
+	DFA60DEB16110EA90018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8D161107B30018CFDC /* main.cpp */;
+		name = "main.cpp: 284";
+		rLen = 0;
+		rLoc = 8550;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 0;
+	};
+	DFA60DFB16110F440018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8D161107B30018CFDC /* main.cpp */;
+		name = "main.cpp: 285";
+		rLen = 0;
+		rLoc = 8566;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 8274;
+	};
+	DFA60DFE16110FB30018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60DFF16110FB30018CFDC /* Spyros.pbxuser */;
+		name = "Spyros.pbxuser: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 527;
+		vrLoc = 0;
+	};
+	DFA60DFF16110FB30018CFDC /* Spyros.pbxuser */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text;
+		name = Spyros.pbxuser;
+		path = /Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode/MVEEXcode.xcodeproj/Spyros.pbxuser;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 2769}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 527}";
+		};
+	};
+	DFA60E0016110FB30018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60E0116110FB30018CFDC /* Spyros.mode1v3 */;
+		name = "Spyros.mode1v3: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 440;
+		vrLoc = 0;
+	};
+	DFA60E0116110FB30018CFDC /* Spyros.mode1v3 */ = {
+		isa = PBXFileReference;
+		name = Spyros.mode1v3;
+		path = /Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode/MVEEXcode.xcodeproj/Spyros.mode1v3;
+		sourceTree = "<absolute>";
+	};
+	DFA60E0216110FB30018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60E0316110FB30018CFDC /* Spyros.mode1v3 */;
+		name = "Spyros.mode1v3: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 440;
+		vrLoc = 0;
+	};
+	DFA60E0316110FB30018CFDC /* Spyros.mode1v3 */ = {
+		isa = PBXFileReference;
+		name = Spyros.mode1v3;
+		path = /Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode/MVEEXcode.xcodeproj/Spyros.mode1v3;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1219, 18278}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 440}";
+		};
+	};
+	DFA60E0616110FC60018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8D161107B30018CFDC /* main.cpp */;
+		name = "main.cpp: 9";
+		rLen = 1;
+		rLoc = 139;
+		rType = 0;
+		vrLen = 730;
+		vrLoc = 0;
+	};
+	DFA60E0716110FC60018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D89161107B30018CFDC /* BlasWrappers.cpp */;
+		name = "BlasWrappers.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	DFA60E0816110FC60018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D89161107B30018CFDC /* BlasWrappers.cpp */;
+		name = "BlasWrappers.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 0;
+	};
+	DFA60E13161110B80018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D89161107B30018CFDC /* BlasWrappers.cpp */;
+		name = "BlasWrappers.cpp: 20";
+		rLen = 0;
+		rLoc = 438;
+		rType = 0;
+		vrLen = 786;
+		vrLoc = 0;
+	};
+	DFA60E14161110B80018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D89161107B30018CFDC /* BlasWrappers.cpp */;
+		name = "BlasWrappers.cpp: 12";
+		rLen = 0;
+		rLoc = 275;
+		rType = 0;
+		vrLen = 787;
+		vrLoc = 0;
 	};
 }
