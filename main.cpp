@@ -281,7 +281,7 @@ int testMVEE()
 	gsl_rng_env_setup();
 	T = gsl_rng_default;
 	r = gsl_rng_alloc(T);
-	int n = 50;
+	int n = 20;
 	int m = 100000;//m=5;
 	double tol = 0.0000001;
 	bool doPrint = false;
