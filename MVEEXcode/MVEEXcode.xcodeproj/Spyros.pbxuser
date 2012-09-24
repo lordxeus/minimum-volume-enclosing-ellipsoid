@@ -1,7 +1,7 @@
 // !$*UTF8*$!
 {
 	08FB7793FE84155DC02AAC07 /* Project object */ = {
-		activeBuildConfigurationName = Debug;
+		activeBuildConfigurationName = Release;
 		activeExecutable = DFA60D80161107700018CFDC /* MVEEXcode */;
 		activeTarget = 8DD76F620486A84900D96B5E /* MVEEXcode */;
 		addToTargets = (
@@ -43,6 +43,9 @@
 			DFA60DA6161107F00018CFDC /* PBXTextBookmark */ = DFA60DA6161107F00018CFDC /* PBXTextBookmark */;
 			DFA60DAC161108D50018CFDC /* PBXTextBookmark */ = DFA60DAC161108D50018CFDC /* PBXTextBookmark */;
 			DFA60DAD1611092E0018CFDC /* PBXTextBookmark */ = DFA60DAD1611092E0018CFDC /* PBXTextBookmark */;
+			DFA60DDE16110C230018CFDC /* PBXTextBookmark */ = DFA60DDE16110C230018CFDC /* PBXTextBookmark */;
+			DFA60DDF16110C230018CFDC /* PBXBookmark */ = DFA60DDF16110C230018CFDC /* PBXBookmark */;
+			DFA60DE016110C230018CFDC /* PBXTextBookmark */ = DFA60DE016110C230018CFDC /* PBXTextBookmark */;
 		};
 		sourceControlManager = DFA60D84161107800018CFDC /* Source Control */;
 		userBuildSettings = {
@@ -72,6 +75,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -79,6 +83,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = MVEEXcode;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
@@ -96,6 +102,13 @@
 	DFA60D85161107800018CFDC /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	DFA60D8D161107B30018CFDC /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 4472}}";
+			sepNavSelRange = "{8550, 0}";
+			sepNavVisRange = "{8183, 785}";
+		};
 	};
 	DFA60D8F161107B30018CFDC /* minVolume.h */ = {
 		uiCtxt = {
@@ -154,5 +167,29 @@
 		rType = 0;
 		vrLen = 792;
 		vrLoc = 0;
+	};
+	DFA60DDE16110C230018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8F161107B30018CFDC /* minVolume.h */;
+		name = "minVolume.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 0;
+	};
+	DFA60DDF16110C230018CFDC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DFA60D8D161107B30018CFDC /* main.cpp */;
+	};
+	DFA60DE016110C230018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8D161107B30018CFDC /* main.cpp */;
+		name = "main.cpp: 284";
+		rLen = 0;
+		rLoc = 8550;
+		rType = 0;
+		vrLen = 785;
+		vrLoc = 8183;
 	};
 }
