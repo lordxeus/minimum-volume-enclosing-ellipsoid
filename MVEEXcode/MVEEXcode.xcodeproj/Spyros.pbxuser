@@ -1,0 +1,158 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = DFA60D80161107700018CFDC /* MVEEXcode */;
+		activeTarget = 8DD76F620486A84900D96B5E /* MVEEXcode */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* MVEEXcode */,
+		);
+		codeSenseManager = DFA60D85161107800018CFDC /* Code sense */;
+		executables = (
+			DFA60D80161107700018CFDC /* MVEEXcode */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					833,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 370214768;
+			PBXWorkspaceStateSaveDate = 370214768;
+		};
+		perUserProjectItems = {
+			DFA60DA4161107F00018CFDC /* PBXTextBookmark */ = DFA60DA4161107F00018CFDC /* PBXTextBookmark */;
+			DFA60DA5161107F00018CFDC /* PBXBookmark */ = DFA60DA5161107F00018CFDC /* PBXBookmark */;
+			DFA60DA6161107F00018CFDC /* PBXTextBookmark */ = DFA60DA6161107F00018CFDC /* PBXTextBookmark */;
+			DFA60DAC161108D50018CFDC /* PBXTextBookmark */ = DFA60DAC161108D50018CFDC /* PBXTextBookmark */;
+			DFA60DAD1611092E0018CFDC /* PBXTextBookmark */ = DFA60DAD1611092E0018CFDC /* PBXTextBookmark */;
+		};
+		sourceControlManager = DFA60D84161107800018CFDC /* Source Control */;
+		userBuildSettings = {
+			OBJROOT = /Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode;
+			SYMROOT = /Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode;
+		};
+	};
+	8DD76F620486A84900D96B5E /* MVEEXcode */ = {
+		activeExec = 0;
+		executables = (
+			DFA60D80161107700018CFDC /* MVEEXcode */,
+		);
+	};
+	DFA60D80161107700018CFDC /* MVEEXcode */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = MVEEXcode;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	DFA60D84161107800018CFDC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	DFA60D85161107800018CFDC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DFA60D8F161107B30018CFDC /* minVolume.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1677}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 792}";
+		};
+	};
+	DFA60D90161107B30018CFDC /* MVEE.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1011, 1144}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 629}";
+		};
+	};
+	DFA60DA4161107F00018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D90161107B30018CFDC /* MVEE.cpp */;
+		name = "MVEE.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 629;
+		vrLoc = 0;
+	};
+	DFA60DA5161107F00018CFDC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DFA60D8F161107B30018CFDC /* minVolume.h */;
+	};
+	DFA60DA6161107F00018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8F161107B30018CFDC /* minVolume.h */;
+		name = "minVolume.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 0;
+	};
+	DFA60DAC161108D50018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8F161107B30018CFDC /* minVolume.h */;
+		name = "minVolume.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 0;
+	};
+	DFA60DAD1611092E0018CFDC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DFA60D8F161107B30018CFDC /* minVolume.h */;
+		name = "minVolume.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 792;
+		vrLoc = 0;
+	};
+}
