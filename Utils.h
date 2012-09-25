@@ -7,10 +7,10 @@
  *  Created by Spyros Schismenos on 07/06/2012.
  *   
  *  This contains some basic utilities, mainly simple wrappers around commonly used functions
- *  No serious or simple linear algebra goes here.
  */
 
 #include <gsl/gsl_matrix.h> 
+#include <gsl/gsl_linalg.h>
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 #include <time.h>
@@ -84,5 +84,27 @@ bool tolZero(const double& x1, const double& x2, const double tol);
 void getNotI(const gsl_vector_int* x, gsl_vector_int* y);
 
 double Myavg(const std::vector<double>& x);
+
+double norm2(const gsl_matrix* X);
+
+// min(x(u>eps)) in MATLAB
+void minOnSubset(const gsl_vector* x, const gsl_vector* u, double* minValue, int* minPosition, double eps = 0.00000001);
+
+//this does the equivalent of output=original(indices)
+//here indices is of size n and has 0 or 1
+//at least one 1 is needed
+//output has to be already defined to be of size sum(indices) 
+void getSubVector(gsl_vector* original,const gsl_vector_int* indices, gsl_vector* output);
+void getSubVector(gsl_vector_int* original,const gsl_vector_int* indices, gsl_vector_int* output);
+
+//this does the equivalent of output=original(:,indices)
+//here indices is of size m and contains 0's or 1's
+//at least one 1 is needed
+//output has to be already defined to be of size [n,sum(indices)] 
+void getSubMatrixFromColumns(const gsl_matrix* input, const gsl_vector_int* indices, gsl_matrix* output);
+
+//This method emulates the find(u>eps) of MATLAB
+//posIndices has the same size as x, and has 1 if element is positive, 0 otherwise.
+void findPositive(gsl_vector* posIndices, const gsl_vector* x,double eps=0.000000000001);
 
 #endif

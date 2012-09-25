@@ -1,6 +1,5 @@
 /*
  *  Utils.cpp
- *  LinAlg
  *
  *  Created by Spyros Schismenos on 07/06/2012.
  *
@@ -323,4 +322,101 @@ double Myavg(const std::vector<double>& x)
 		res = res + x[i];
 	}
 	return res/(double)x.size();
+}
+
+double norm2(const gsl_matrix* X)
+{
+	size_t n = X->size1; //Assume here that X is square matrix
+	gsl_matrix* Xtemp = gsl_matrix_alloc(n,n); gsl_matrix_memcpy(Xtemp,X);
+	gsl_matrix* V = gsl_matrix_alloc(n,n);
+	gsl_vector* S = gsl_vector_alloc(n);
+	gsl_vector* work = gsl_vector_alloc(n);
+	gsl_linalg_SV_decomp(Xtemp,V,S,work);
+	double result = gsl_vector_get(S,0);
+	gsl_matrix_free(Xtemp);
+	gsl_matrix_free(V);
+	gsl_vector_free(S);
+	gsl_vector_free(work);
+	return result;
+}
+
+void minOnSubset(const gsl_vector* x, const gsl_vector* u, double* minValue, int* minPosition,double eps)
+{
+	int n = x->size;
+	int i; int j;
+	for (i=0; i<n; i++) {
+		if (gsl_vector_get(u,i)>eps) {
+			j=i;
+			break;
+		}
+	}
+	*minPosition = j;
+	
+	double currMin = gsl_vector_get(x,j);
+	for (i=j+1; i<n; i++) {
+		if (gsl_vector_get(u,i)>eps) {
+			double xi = gsl_vector_get(x,i);
+			if (xi<currMin) {
+				currMin = xi;
+				*minPosition = i;
+			}
+		}
+	}
+	*minValue = currMin;
+}
+
+//this does the equivalent of output=original(indices)
+//here indices is of size n and has 0 or 1
+//at least one 1 is needed
+void getSubVector(gsl_vector* original, const gsl_vector_int* indices, gsl_vector* output)
+{	
+	size_t n = original->size;
+	int i=0; int j=0;
+	for (i=0; i<n; i++) {
+		if (gsl_vector_int_get(indices,i)>0.5) {
+			gsl_vector_set(output,j,gsl_vector_get(original,i));
+			j++;
+		}
+	}
+}
+
+void getSubVector(gsl_vector_int* original, const gsl_vector_int* indices, gsl_vector_int* output)
+{	
+	size_t n = original->size;
+	int i=0; int j=0;
+	for (i=0; i<n; i++) {
+		if (gsl_vector_int_get(indices,i)>0.5) {
+			gsl_vector_int_set(output,j,gsl_vector_int_get(original,i));
+			j++;
+		}
+	}
+}
+
+//this does the equivalent of output=original(:,indices)
+//here indices is of size m and contains 0's or 1's
+//at least one 1 is needed
+//for the moment being, output has to be already defined to be of size n,sum(indices) 
+void getSubMatrixFromColumns(const gsl_matrix* input, const gsl_vector_int* indices, gsl_matrix* output)
+{
+	size_t n = input->size1;
+	size_t k = indices->size;
+	gsl_vector* tempColumn = gsl_vector_alloc(n);
+	for (int i=0; i<k; i++) {
+		gsl_matrix_get_col(tempColumn, input, gsl_vector_int_get(indices,i));
+		gsl_matrix_set_col(output, i, tempColumn);
+	}
+	gsl_vector_free(tempColumn);
+}
+
+//This method emulates the find(u>0) of MATLAB
+//posIndices has the same size as x, and has 1 if element is positive, 0 otherwise.
+void findPositive(gsl_vector* posIndices, const gsl_vector* x, double eps)
+{
+	int i=0;
+	int n = x->size;
+	for (i=0; i<n; i++) {
+		if (gsl_vector_get(x,i)>eps) {
+			gsl_vector_set(posIndices,i,1.0);
+		}
+	}
 }
