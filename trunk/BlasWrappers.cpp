@@ -9,7 +9,7 @@
 // some documentation can be found here 
 // https://developer.apple.com/library/mac/#documentation/Accelerate/Reference/BLAS_Ref/Reference/reference.html
 
-#include "BlasWrappers.h "
+#include "BlasWrappers.h"
 #include "gsl/gsl_matrix.h"
 #include "gsl/gsl_permutation.h"
 #include "gsl/gsl_sort_vector.h"

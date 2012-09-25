@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		8DD76F6A0486A84900D96B5E /* MVEEXcode.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* MVEEXcode.1 */; };
 		DFA60D98161107B30018CFDC /* BlasWrappers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D89161107B30018CFDC /* BlasWrappers.cpp */; };
-		DFA60D99161107B30018CFDC /* Legacy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D8B161107B30018CFDC /* Legacy.cpp */; };
 		DFA60D9A161107B30018CFDC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D8D161107B30018CFDC /* main.cpp */; };
 		DFA60D9B161107B30018CFDC /* minVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D8E161107B30018CFDC /* minVolume.cpp */; };
 		DFA60D9C161107B30018CFDC /* MVEE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D90161107B30018CFDC /* MVEE.cpp */; };
 		DFA60D9D161107B30018CFDC /* MVEEPartial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D92161107B30018CFDC /* MVEEPartial.cpp */; };
 		DFA60D9E161107B30018CFDC /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D94161107B30018CFDC /* Utils.cpp */; };
-		DFA60D9F161107B30018CFDC /* UtilsNoGSL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D96161107B30018CFDC /* UtilsNoGSL.cpp */; };
 		DFA60DC4161109E80018CFDC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA60DC3161109E80018CFDC /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +35,6 @@
 		C6859E8B029090EE04C91782 /* MVEEXcode.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MVEEXcode.1; sourceTree = "<group>"; };
 		DFA60D89161107B30018CFDC /* BlasWrappers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BlasWrappers.cpp; path = ../BlasWrappers.cpp; sourceTree = SOURCE_ROOT; };
 		DFA60D8A161107B30018CFDC /* BlasWrappers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlasWrappers.h; path = ../BlasWrappers.h; sourceTree = SOURCE_ROOT; };
-		DFA60D8B161107B30018CFDC /* Legacy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Legacy.cpp; path = ../Legacy.cpp; sourceTree = SOURCE_ROOT; };
-		DFA60D8C161107B30018CFDC /* Legacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Legacy.h; path = ../Legacy.h; sourceTree = SOURCE_ROOT; };
 		DFA60D8D161107B30018CFDC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = SOURCE_ROOT; };
 		DFA60D8E161107B30018CFDC /* minVolume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = minVolume.cpp; path = ../minVolume.cpp; sourceTree = SOURCE_ROOT; };
 		DFA60D8F161107B30018CFDC /* minVolume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = minVolume.h; path = ../minVolume.h; sourceTree = SOURCE_ROOT; };
@@ -48,8 +44,6 @@
 		DFA60D93161107B30018CFDC /* MVEEPartial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MVEEPartial.h; path = ../MVEEPartial.h; sourceTree = SOURCE_ROOT; };
 		DFA60D94161107B30018CFDC /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../Utils.cpp; sourceTree = SOURCE_ROOT; };
 		DFA60D95161107B30018CFDC /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../Utils.h; sourceTree = SOURCE_ROOT; };
-		DFA60D96161107B30018CFDC /* UtilsNoGSL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UtilsNoGSL.cpp; path = ../UtilsNoGSL.cpp; sourceTree = SOURCE_ROOT; };
-		DFA60D97161107B30018CFDC /* UtilsNoGSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UtilsNoGSL.h; path = ../UtilsNoGSL.h; sourceTree = SOURCE_ROOT; };
 		DFA60DC3161109E80018CFDC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -81,8 +75,6 @@
 			children = (
 				DFA60D89161107B30018CFDC /* BlasWrappers.cpp */,
 				DFA60D8A161107B30018CFDC /* BlasWrappers.h */,
-				DFA60D8B161107B30018CFDC /* Legacy.cpp */,
-				DFA60D8C161107B30018CFDC /* Legacy.h */,
 				DFA60D8D161107B30018CFDC /* main.cpp */,
 				DFA60D8E161107B30018CFDC /* minVolume.cpp */,
 				DFA60D8F161107B30018CFDC /* minVolume.h */,
@@ -92,8 +84,6 @@
 				DFA60D93161107B30018CFDC /* MVEEPartial.h */,
 				DFA60D94161107B30018CFDC /* Utils.cpp */,
 				DFA60D95161107B30018CFDC /* Utils.h */,
-				DFA60D96161107B30018CFDC /* UtilsNoGSL.cpp */,
-				DFA60D97161107B30018CFDC /* UtilsNoGSL.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -165,13 +155,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFA60D98161107B30018CFDC /* BlasWrappers.cpp in Sources */,
-				DFA60D99161107B30018CFDC /* Legacy.cpp in Sources */,
 				DFA60D9A161107B30018CFDC /* main.cpp in Sources */,
 				DFA60D9B161107B30018CFDC /* minVolume.cpp in Sources */,
 				DFA60D9C161107B30018CFDC /* MVEE.cpp in Sources */,
 				DFA60D9D161107B30018CFDC /* MVEEPartial.cpp in Sources */,
 				DFA60D9E161107B30018CFDC /* Utils.cpp in Sources */,
-				DFA60D9F161107B30018CFDC /* UtilsNoGSL.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

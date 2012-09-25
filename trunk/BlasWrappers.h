@@ -10,7 +10,7 @@
 
 #include <Accelerate/Accelerate.h>
 
-//some gsl stuff
+//some gsl stuff 
 #include <gsl/gsl_matrix.h>
 
 double My_ddot(const gsl_vector * x, const gsl_vector* y);
