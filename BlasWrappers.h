@@ -2,15 +2,13 @@
 #define BLAS_WRAPPERS
 /*
  *  BlasWrappers.h
- *  LinAlg
  *
  *  Created by Spyros Schismenos on 07/06/2012.
- *
+ *  The point of this is to create wrappers around cblas methods
+ *  to allow for more practical calls using the gsl matrix/vector classes
  */ 
 
 #include <Accelerate/Accelerate.h>
-
-//some gsl stuff 
 #include <gsl/gsl_matrix.h>
 
 double My_ddot(const gsl_vector * x, const gsl_vector* y);
