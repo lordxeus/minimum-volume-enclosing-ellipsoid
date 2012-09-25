@@ -15,6 +15,7 @@
 		DFA60D9D161107B30018CFDC /* MVEEPartial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D92161107B30018CFDC /* MVEEPartial.cpp */; };
 		DFA60D9E161107B30018CFDC /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60D94161107B30018CFDC /* Utils.cpp */; };
 		DFA60DC4161109E80018CFDC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA60DC3161109E80018CFDC /* Accelerate.framework */; };
+		DFA60E931612733B0018CFDC /* Cholesky.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA60E921612733B0018CFDC /* Cholesky.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,8 @@
 		DFA60D94161107B30018CFDC /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = ../Utils.cpp; sourceTree = SOURCE_ROOT; };
 		DFA60D95161107B30018CFDC /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../Utils.h; sourceTree = SOURCE_ROOT; };
 		DFA60DC3161109E80018CFDC /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		DFA60E911612733B0018CFDC /* Cholesky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cholesky.h; path = ../Cholesky.h; sourceTree = SOURCE_ROOT; };
+		DFA60E921612733B0018CFDC /* Cholesky.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Cholesky.cpp; path = ../Cholesky.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				DFA60D93161107B30018CFDC /* MVEEPartial.h */,
 				DFA60D94161107B30018CFDC /* Utils.cpp */,
 				DFA60D95161107B30018CFDC /* Utils.h */,
+				DFA60E911612733B0018CFDC /* Cholesky.h */,
+				DFA60E921612733B0018CFDC /* Cholesky.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				DFA60D9C161107B30018CFDC /* MVEE.cpp in Sources */,
 				DFA60D9D161107B30018CFDC /* MVEEPartial.cpp in Sources */,
 				DFA60D9E161107B30018CFDC /* Utils.cpp in Sources */,
+				DFA60E931612733B0018CFDC /* Cholesky.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

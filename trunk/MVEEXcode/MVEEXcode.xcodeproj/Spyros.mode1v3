@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>DFA60F0416127AA10018CFDC</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>minVolume.cpp</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>DFA60F0516127AA10018CFDC</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>minVolume.cpp</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>DFA60F0616127AA10018CFDC</string>
+						<key>history</key>
+						<array>
+							<string>DFA60EDB161276CF0018CFDC</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {750, 677}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>15 60 750 718 0 0 1280 778 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -275,7 +316,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>12</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -320,7 +361,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>minVolume.cpp</string>
+								<string>Utils.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,24 +369,26 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>minVolume.cpp</string>
+										<string>Utils.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DFA60E6B16126F600018CFDC</string>
+										<string>DFA60F0316127AA10018CFDC</string>
 										<key>history</key>
 										<array>
 											<string>DFA60E6016126F600018CFDC</string>
-											<string>DFA60E6116126F600018CFDC</string>
-											<string>DFA60E6216126F600018CFDC</string>
 											<string>DFA60E6316126F600018CFDC</string>
-											<string>DFA60E6416126F600018CFDC</string>
-											<string>DFA60E6516126F600018CFDC</string>
-											<string>DFA60E6616126F600018CFDC</string>
-											<string>DFA60E6716126F600018CFDC</string>
-											<string>DFA60E6816126F600018CFDC</string>
-											<string>DFA60E6916126F600018CFDC</string>
-											<string>DFA60E6A16126F600018CFDC</string>
+											<string>DFA60EF816127AA10018CFDC</string>
+											<string>DFA60EF916127AA10018CFDC</string>
+											<string>DFA60EFA16127AA10018CFDC</string>
+											<string>DFA60EFB16127AA10018CFDC</string>
+											<string>DFA60EFC16127AA10018CFDC</string>
+											<string>DFA60EFD16127AA10018CFDC</string>
+											<string>DFA60EFE16127AA10018CFDC</string>
+											<string>DFA60EFF16127AA10018CFDC</string>
+											<string>DFA60F0016127AA10018CFDC</string>
+											<string>DFA60F0116127AA10018CFDC</string>
+											<string>DFA60F0216127AA10018CFDC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -549,6 +592,7 @@
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>DFA60DAA161107F00018CFDC</string>
+		<string>DFA60F0416127AA10018CFDC</string>
 		<string>/Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode/MVEEXcode.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -573,7 +617,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>minVolume.cpp</string>
+								<string>main.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -644,7 +688,7 @@
 			<key>WindowToolGUID</key>
 			<string>DFA60DAA161107F00018CFDC</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

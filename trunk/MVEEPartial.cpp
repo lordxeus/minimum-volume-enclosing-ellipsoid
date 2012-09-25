@@ -4,6 +4,8 @@
 #include <gsl/gsl_rng.h>
 #include <gsl/gsl_randist.h>
 #include <vector>
+#include "Cholesky.h"
+
 
 //Basic constructor
 MVEEPartial::MVEEPartial(int h, gsl_matrix* XX, const std::string& _solve_type): MVEE(XX), h(h), solve_type(_solve_type)
