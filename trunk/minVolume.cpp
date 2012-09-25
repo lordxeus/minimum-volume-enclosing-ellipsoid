@@ -7,7 +7,7 @@
 
 #include "minVolume.h" 
 
-void getVarFastFast(gsl_vector* var, gsl_matrix* x)
+void getVar(gsl_vector* var, gsl_matrix* x)
 {
 	gsl_matrix_mul_elements(x,x); //x is now contaminated!
 	int n = x->size1;
@@ -518,7 +518,7 @@ int minVol(const gsl_matrix* X,
 	// considered every n or 50000.
 	gsl_matrix* RX = gsl_matrix_alloc(XX->size1,XX->size2); gsl_matrix_memcpy(RX, XX);
 	My_dtrsm(CblasLeft, CblasLower, CblasNoTrans, CblasNonUnit, 1.0, R, RX); //print(RX);
-	gsl_vector* var = gsl_vector_alloc(m); getVarFastFast(var, RX); //print(var);
+	gsl_vector* var = gsl_vector_alloc(m); getVar(var, RX); //print(var);
 	int iter=0;
 	int n100 = GSL_MAX(n, 100);
 	int n50000 = GSL_MAX(n,50000);
@@ -548,7 +548,7 @@ int minVol(const gsl_matrix* X,
 		factor = 1.0;
 		gsl_matrix_free(RX); RX = gsl_matrix_alloc(XX->size1,XX->size2); gsl_matrix_memcpy(RX, XX);
 		My_dtrsm(CblasLeft, CblasLower, CblasNoTrans, CblasNonUnit, 1.0, R, RX); //XX is RX in the MATLAB code
-		gsl_vector_free(var); var = gsl_vector_alloc(n); getVarFastFast(var,RX);
+		gsl_vector_free(var); var = gsl_vector_alloc(n); getVar(var,RX);
 	}
 	else {
 		gsl_vector_free(smallVar); smallVar = gsl_vector_calloc(mm); getSubVector(var, e, smallVar);
@@ -660,7 +660,7 @@ int minVol(const gsl_matrix* X,
 			
 			My_dtrsm(CblasLeft, CblasLower, CblasNoTrans, CblasNonUnit, 1.0, R, RX);
 			
-			gsl_vector_free(var); var = gsl_vector_alloc(XX->size2); getVarFastFast(var,RX);
+			gsl_vector_free(var); var = gsl_vector_alloc(XX->size2); getVar(var,RX);
 			gsl_matrix_memcpy(RX, XX);
 			
 		}
@@ -699,7 +699,7 @@ int minVol(const gsl_matrix* X,
 					gsl_matrix_set_zero(R); getChol(M,R);
 					factor = 1.0;
 					My_dtrsm(CblasLeft, CblasLower, CblasNoTrans, CblasNonUnit, 1.0, R, XX); //Now XX is RX
-					gsl_vector_free(var); var = gsl_vector_alloc(XX->size2); getVarFastFast(var,XX);
+					gsl_vector_free(var); var = gsl_vector_alloc(XX->size2); getVar(var,XX);
 					getAbsMax(var,&maxvar,&maxj);
 				}
 				else {

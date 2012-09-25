@@ -63,10 +63,10 @@ int sum(const gsl_vector_int* x);
 
 // This method calculates sum(X.*X,1) in MATLAB
 // slow code, but works with const x
-void getVar(gsl_vector* var,const gsl_matrix* x);
+void getVarOld(gsl_vector* var,const gsl_matrix* x);
 
 // fast code, but it contaminates x
-void getVarFast(gsl_vector* var, gsl_matrix* x);
+void getVarOldFast(gsl_vector* var, gsl_matrix* x);
 
 void findThresh(const gsl_vector* x, gsl_vector* indices, double thresh);
 

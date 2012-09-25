@@ -7,8 +7,6 @@
 #include <vector>
 #include <numeric>
 
-//#include "UtilsNoGSL.h"
-
 int testMVEEPartial()
 {
 	const gsl_rng_type* T;

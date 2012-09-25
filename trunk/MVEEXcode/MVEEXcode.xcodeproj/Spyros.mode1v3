@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -277,7 +275,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -315,12 +313,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MVEEPartial.cpp</string>
+								<string>minVolume.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -328,24 +328,24 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MVEEPartial.cpp</string>
+										<string>minVolume.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DFA60E5116126B4A0018CFDC</string>
+										<string>DFA60E6B16126F600018CFDC</string>
 										<key>history</key>
 										<array>
-											<string>DFA60E4616126B4A0018CFDC</string>
-											<string>DFA60E4716126B4A0018CFDC</string>
-											<string>DFA60E4816126B4A0018CFDC</string>
-											<string>DFA60E4916126B4A0018CFDC</string>
-											<string>DFA60E4A16126B4A0018CFDC</string>
-											<string>DFA60E4B16126B4A0018CFDC</string>
-											<string>DFA60E4C16126B4A0018CFDC</string>
-											<string>DFA60E4D16126B4A0018CFDC</string>
-											<string>DFA60E4E16126B4A0018CFDC</string>
-											<string>DFA60E4F16126B4A0018CFDC</string>
-											<string>DFA60E5016126B4A0018CFDC</string>
+											<string>DFA60E6016126F600018CFDC</string>
+											<string>DFA60E6116126F600018CFDC</string>
+											<string>DFA60E6216126F600018CFDC</string>
+											<string>DFA60E6316126F600018CFDC</string>
+											<string>DFA60E6416126F600018CFDC</string>
+											<string>DFA60E6516126F600018CFDC</string>
+											<string>DFA60E6616126F600018CFDC</string>
+											<string>DFA60E6716126F600018CFDC</string>
+											<string>DFA60E6816126F600018CFDC</string>
+											<string>DFA60E6916126F600018CFDC</string>
+											<string>DFA60E6A16126F600018CFDC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
