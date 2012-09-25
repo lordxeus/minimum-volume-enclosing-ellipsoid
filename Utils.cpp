@@ -146,7 +146,7 @@ int sum(const gsl_vector_int* x)
 	return res;
 }
 
-void getVar(gsl_vector* var,const gsl_matrix* x)
+void getVarOld(gsl_vector* var,const gsl_matrix* x)
 {
 	size_t n = x->size1;
 	size_t m = x->size2;
@@ -158,7 +158,7 @@ void getVar(gsl_vector* var,const gsl_matrix* x)
 	}
 }
 
-void getVarFast(gsl_vector* var, gsl_matrix* x)
+void getVarOldFast(gsl_vector* var, gsl_matrix* x)
 {
 	gsl_matrix_mul_elements(x,x); //x is now contaminated!
 	int n = x->size1;

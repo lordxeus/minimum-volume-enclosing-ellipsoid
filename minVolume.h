@@ -26,7 +26,7 @@ const double SMALLE = 0.00000001;
 const double VERYSMALL =  0.000000000001;
 
 //even faster code, still contaminates x
-void getVarFastFast(gsl_vector* var, gsl_matrix* x);
+void getVar(gsl_vector* var, gsl_matrix* x);
 
 void cholUpdate(gsl_matrix* R, gsl_vector* x);
 
