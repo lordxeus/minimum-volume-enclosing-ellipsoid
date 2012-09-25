@@ -231,6 +231,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -270,11 +272,12 @@
 								<string>08FB7794FE84155DC02AAC07</string>
 								<string>08FB7795FE84155DC02AAC07</string>
 								<string>1C37FABC05509CD000000102</string>
+								<string>E2644B35053B69B200211256</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>2</integer>
+									<integer>9</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -312,14 +315,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>BlasWrappers.cpp</string>
+								<string>MVEEPartial.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,17 +328,24 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>BlasWrappers.cpp</string>
+										<string>MVEEPartial.cpp</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>DFA60E14161110B80018CFDC</string>
+										<string>DFA60E5116126B4A0018CFDC</string>
 										<key>history</key>
 										<array>
-											<string>DFA60DA4161107F00018CFDC</string>
-											<string>DFA60DDE16110C230018CFDC</string>
-											<string>DFA60E0616110FC60018CFDC</string>
-											<string>DFA60E13161110B80018CFDC</string>
+											<string>DFA60E4616126B4A0018CFDC</string>
+											<string>DFA60E4716126B4A0018CFDC</string>
+											<string>DFA60E4816126B4A0018CFDC</string>
+											<string>DFA60E4916126B4A0018CFDC</string>
+											<string>DFA60E4A16126B4A0018CFDC</string>
+											<string>DFA60E4B16126B4A0018CFDC</string>
+											<string>DFA60E4C16126B4A0018CFDC</string>
+											<string>DFA60E4D16126B4A0018CFDC</string>
+											<string>DFA60E4E16126B4A0018CFDC</string>
+											<string>DFA60E4F16126B4A0018CFDC</string>
+											<string>DFA60E5016126B4A0018CFDC</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -538,9 +546,9 @@
 		<string>DFA60DF316110EFE0018CFDC</string>
 		<string>DFA60DE116110C230018CFDC</string>
 		<string>DFA60DE216110C230018CFDC</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>DFA60DAA161107F00018CFDC</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/Spyros/Documents/dev/GoogleMVEE/MVEE/MVEEXcode/MVEEXcode.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -565,7 +573,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>minVolume.cpp</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -925,7 +933,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

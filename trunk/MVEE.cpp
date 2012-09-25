@@ -1,6 +1,5 @@
 /*
  *  MVEE.cpp
- *  LinAlg
  *
  *  Created by Spyros Schismenos on 27/06/2012.
  *

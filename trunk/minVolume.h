@@ -64,9 +64,9 @@ void getXUXT(const gsl_matrix* X,const gsl_vector* u, gsl_matrix* M, int doWhole
 //Makes R the lower triangular cholesky factor of M
 void getChol(const gsl_matrix* M, gsl_matrix* R);
 
-void updateR(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* down_err);
+void updateROld(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* down_err);
 
-void updateRMike(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau, int* down_err);
+void updateR(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau, int* down_err);
 
 void updatevar(gsl_vector* var,double* tau,double* mult,gsl_matrix* Mxj,gsl_matrix* XX);
 

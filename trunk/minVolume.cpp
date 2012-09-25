@@ -1,6 +1,5 @@
 /*
  *  minVolume.cpp
- *  LinAlg
  *
  *  Created by Spyros Schismenos on 24/06/2012.
  *
@@ -266,44 +265,20 @@ void getXUXT(const gsl_matrix* X,const gsl_vector* u, gsl_matrix* M, int doWhole
 	}
 }
 
-//Makes R the lower triangular cholesky factor of M
-// Not the most efficient in the world, because
-// R gets both upper and lower triangular parts filled with R and R^T
-// may have to make it more compact...
-//Also, keep in mind that LAPACK assumes column order by default which
-//fucks things up massively... hence the transpose_memcpy
 void getChol(const gsl_matrix* M, gsl_matrix* R)
 {
 	int n = M->size1;
-	//gsl_matrix* tempM = gsl_matrix_alloc(n,n); gsl_matrix_memcpy(tempM,M);
-	gsl_matrix_memcpy(R, M); //new
-	
+	gsl_matrix_memcpy(R, M);
 	int info=0;
 	char lower = 'U';
-	int lda = R->tda; //int lda = tempM->tda;
-	dpotrf_(&lower, &n, R->data, &lda, &info);//dpotrf_(&lower, &n, tempM->data, &lda, &info);
-	//print(R);
-	// documentation on dpotrf_ can be found at:
-	// http://www.netlib.org/clapack/CLAPACK-3.1.1/SRC/dpotrf.c
-	
-	//TODO: clean this mess up
-	//gsl_matrix_transpose_memcpy(R,tempM);
-	
-	//int i; int j;
-	//for (i=0; i<n; i++) {
-	//	for (j=i+1; j<n; j++) {
-	//		gsl_matrix_set(R,j,i,gsl_matrix_get(R,i,j));
-	//	}
-	//}
-	
-	//gsl_matrix_free(tempM);
+	int lda = R->tda;
+	dpotrf_(&lower, &n, R->data, &lda, &info);
 }
 
-void updateR(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* down_err)
+void updateROld(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* down_err)
 {
 	*factor = (*factor) / (1.0 - (*tau));
 	int p=0;
-	//gsl_vector_scale(xj, sqrt(GSL_MAX(*tau,- *tau)*(*factor)));
 	My_dscal(xj,sqrt(GSL_MAX(*tau,- *tau)*(*factor)));
 	if (*tau>0.0) {
 		cholUpdate(R, xj);
@@ -320,7 +295,7 @@ void updateR(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* down_
 	print(R);
 }
 
-void updateRMike(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau, int* down_err)
+void updateR(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau, int* down_err)
 {
 	*factor = (*factor) / (1.0 - (*tau));
 
@@ -589,16 +564,11 @@ int minVol(const gsl_matrix* X,
 	oldmm = mm;
 	getMax(var,&maxvar,&maxj); 
 	minOnSubset(var,u,&minvar,&minj); mvup = minvar;
-	//print(XX);
-	//print(var);
-	//printf("%e\n",maxvar);
-	//printf("%e\n",minvar);
 	
 	//Start of loop. Check for termination.
 	while (((maxvar > (1.0+tol)*n) || (mvup < (1.0-tol)*n)) && (iter < maxit)) 
 	{
 		//Find "furthest" and "closest" points using updated var
-		//printf("%d---------\n",iter);
 		iter = iter+1;
 		int j=0; double mvar; int flag_decrease;
 		if (maxvar + mvup > 2*n) {
@@ -696,7 +666,7 @@ int minVol(const gsl_matrix* X,
 		}
 		else {
 			int down_err;
-			updateRMike(R, &factor, z,xj, &tau, &down_err);
+			updateR(R, &factor, z,xj, &tau, &down_err);
 			if (down_err==1) {
 				printf("\n Error in downdating  Cholesky\n");
 				break;
@@ -750,9 +720,6 @@ int minVol(const gsl_matrix* X,
 		if (KKY == 1) {
 			mvup = n;
 		}
-		//printf("maxvar: %e\n",maxvar);
-		//printf("mvup: %e\n",mvup);
-		//print(u);
 		
 	}
 	gsl_matrix_set_zero(M); 

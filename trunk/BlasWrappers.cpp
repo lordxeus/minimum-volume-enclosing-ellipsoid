@@ -1,6 +1,5 @@
 /*
  *  BlasWrappers.cpp
- *  LinAlg
  *
  *  Created by Spyros Schismenos on 07/06/2012.
  *
@@ -20,7 +19,6 @@ double norm2(const gsl_vector* x)
 	return cblas_dnrm2(x->size, x->data,x->stride);
 }
 
-//wrapper for cblas_dgemm
 void My_dgemm(const enum CBLAS_TRANSPOSE TransA,
 			  const enum CBLAS_TRANSPOSE TransB, const double alpha, const gsl_matrix *A,
 			  const gsl_matrix* B,
