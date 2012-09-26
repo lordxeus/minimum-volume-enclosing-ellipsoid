@@ -29,16 +29,12 @@ void getVar(gsl_vector* var, gsl_matrix* x);
 
 double calcNormDiff(const gsl_matrix* M, const gsl_matrix* R, double factor);
 
-//Calculates X * U * XT in an efficient way
-// The symmetric matrix M's lower part is calculated.
-// Cholesky should be able to cope with that...
+//Calculates M = X * U * XT in an efficient way
+// The symmetric matrix M's lower part is calculated only
 void getXUXT(const gsl_matrix* X,const gsl_vector* u, gsl_matrix* M, int doWhole);
-
-void updatevarOld(gsl_vector* var,double* tau,double* mult,gsl_matrix* Mxj,gsl_matrix* XX);
 
 void updateVar(gsl_vector* var,double* tau,double* mult,const gsl_vector* Mxj,const gsl_matrix* XX);
 
-void updateVar(gsl_vector* var,double* tau,double* mult,const gsl_matrix* Mxj,const gsl_matrix* XX);
 
 //the special case n=m
 int minVol(const gsl_matrix* X,
@@ -72,7 +68,7 @@ void calculateBoundRemove(const gsl_matrix* M, int k, const gsl_vector* u, const
 
 void calculateBoundAddRemove(const gsl_matrix* M, int k , int l, const gsl_matrix* X, const gsl_vector* u, const double& optimal, double& bound);
 
-//version that is used for when k and l are indices in X, but u is of size h<m.
+//version that is used when k and l are indices in X, but u is of size h<m.
 void calculateBoundAddRemove(const gsl_matrix* M, int k , int l,int i, const gsl_matrix* X, const gsl_vector* u, const double& optimal, double& bound);
 
 void getRandomMatrixMVEE(gsl_matrix* X, gsl_rng* r, double& optimalValue, int h);
