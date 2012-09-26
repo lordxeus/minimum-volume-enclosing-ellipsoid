@@ -17,41 +17,6 @@ void getVar(gsl_vector* var, gsl_matrix* x)
 	gsl_vector_free(ones);
 }
 
-/*
-
-//convention is that subIndices has 0 or 1 and 1 means that we are interested ... There should be at least one 1
-void minOnSubset(const gsl_vector* x, const gsl_vector* subIndices, double* minValue, int* minPosition)
-{
-	int n = x->size;
-	int i; int j;
-	for (i=0; i<n; i++) {
-		if (gsl_vector_get(subIndices,i)>0.5) {
-			j=i;
-			break;
-		}
-	}
-	*minPosition = j;
-	if (j==n) {
-		printf("we are here\n");
-		print(subIndices);
-		*minPosition = 0;
-		*minValue = -100.0;
-		return;
-	}
-	double currMin = gsl_vector_get(x,j);
-	for (i=j+1; i<n; i++) {
-		if (gsl_vector_get(subIndices,i)>0.5) {
-			double xi = gsl_vector_get(x,i);
-			if (xi<currMin) {
-				currMin = xi;
-				*minPosition = i;
-			}
-		}
-	}
-	*minValue = currMin;
-}
-*/
-
 double calcNormDiff(const gsl_matrix* M, const gsl_matrix* R, double factor)
 {
 	gsl_matrix* Mtemp = gsl_matrix_alloc(M->size1,M->size2);
@@ -86,37 +51,6 @@ void getXUXT(const gsl_matrix* X,const gsl_vector* u, gsl_matrix* M, int doWhole
 			}
 		}
 	}
-}
-
-void updatevarOld(gsl_vector* var,double* tau,double* mult,gsl_matrix* Mxj,gsl_matrix* XX)
-{	
-	int n = XX->size2;
-	gsl_matrix* temp = gsl_matrix_calloc(1,XX->size2);
-	double tauModified = 1.0/(1.0-*tau);
-	My_dgemm(CblasTrans,CblasNoTrans,1.0, Mxj,XX,0.0,temp);
-	
-	for (int i=0; i<n; i++) {
-		double dtemp = gsl_matrix_get(temp, 0, i);
-		gsl_vector_set(var, i,gsl_vector_get(var,i)-(*mult)*dtemp*dtemp);
-	}
-	gsl_vector_scale(var, tauModified);
-	gsl_matrix_free(temp);
-}
-
-void updateVar(gsl_vector* var,double* tau,double* mult,const gsl_matrix* Mxj,const gsl_matrix* XX)
-{	
-	int m = XX->size2;
-	gsl_vector* temp = gsl_vector_alloc(m);
-	gsl_matrix_view tempV = gsl_matrix_view_vector(temp,1,m);
-	double tauModified = 1.0/(1.0-*tau);
-	My_dgemm(CblasTrans,CblasNoTrans,1.0, Mxj,XX,0.0,&tempV.matrix);
-	gsl_vector_mul(temp, temp);
-	//gsl_vector_scale(temp,*mult);
-	//gsl_vector_sub(var,temp);
-	My_daxpy(var, temp, -(*mult));
-	//gsl_vector_scale(var, tauModified);
-	My_dscal(var, tauModified);
-	gsl_vector_free(temp);
 }
 
 void updateVar(gsl_vector* var,double* tau,double* mult,const gsl_vector* Mxj,const gsl_matrix* XX)
@@ -378,12 +312,7 @@ int minVol(const gsl_matrix* X,
 			
 		}
 		else {
-			int down_err;
-			updateR(R, &factor, z,xj, &tau, &down_err);
-			if (down_err==1) {
-				printf("\n Error in downdating  Cholesky\n");
-				break;
-			}
+			updateR(R, &factor, z,xj, &tau);
 			double mult = tau / (1.0 - tau + tau * mvar);
 			updateVar(var, &tau, &mult,Rxj, XX);
 		}

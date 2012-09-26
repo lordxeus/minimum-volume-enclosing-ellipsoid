@@ -107,7 +107,7 @@ void updateROld(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* do
 	}
 }
 
-void updateR(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau, int* down_err)
+void updateR(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau)
 {
 	*factor = (*factor) / (1.0 - (*tau));
 	

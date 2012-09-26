@@ -13,7 +13,6 @@
 #include <Accelerate/Accelerate.h>
 
 //some gsl stuff
-#include <gsl/gsl_errno.h>
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_linalg.h>
 
@@ -26,6 +25,6 @@ void cholDowndate(gsl_matrix* R, gsl_vector* x, int* info);
 
 void updateROld(gsl_matrix* R,double* factor,gsl_vector* xj,double* tau, int* down_err);
 
-void updateR(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau, int* down_err);
+void updateR(gsl_matrix* R,double* factor,gsl_vector* p,gsl_vector* z, double* tau);
 
 #endif
