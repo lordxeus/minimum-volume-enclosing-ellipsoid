@@ -97,7 +97,6 @@ int minVol(const gsl_matrix* X,
 		   const bool doPrint,
 		   const bool isInitialized)
 {
-	int numRecomputes = 0;
 	//Finds the minimum-volume ellipsoid containing the columns of the matrix X using the
 	// Fedorov-Wynn-Franke-Wolfe method, with Wolfe-Atwood away steps if KKY=0
 	
@@ -111,6 +110,7 @@ int minVol(const gsl_matrix* X,
 	//u determines the optimal weights on the m columns of X
 	//M = XUXT determines the shape of the ellipsoid xT*inv(M)*x <=n
 
+	int numRecomputes = 0;
 	int n = X->size1; int m = X->size2;
 
 	// Handle the special case m = n
@@ -149,8 +149,8 @@ int minVol(const gsl_matrix* X,
 	
 	//Create the Cholesky factor R of the matrix M = X*U*XT
 	//inv(M) = factor * inv(R)*inv(R)^T
-	gsl_matrix* M = gsl_matrix_calloc(n,n); getXUXT(X,u,M,0); //print(M);
-	gsl_matrix* R = gsl_matrix_calloc(n,n); getChol(M,R); //print(R);//now R holds the upper triangular part
+	gsl_matrix* M = gsl_matrix_alloc(n,n); getXUXT(X,u,M,0);
+	gsl_matrix* R = gsl_matrix_alloc(n,n); getChol(M,R);//now R holds the upper triangular part
 	double factor = 1.0;
 	
 	//act lists the mm non-eliminated columns of X, XX is the corresponding submatrix. 
@@ -230,14 +230,13 @@ int minVol(const gsl_matrix* X,
 		}
 		//printf("j: %d\n",j);
 		//printf("flag_decrease: %d\n",flag_decrease);
+		
 		//Compute Mxj = inv(M)*xj and recompute varj
 		int flag_recompute = 0;
 		gsl_vector_view column_j = gsl_matrix_column(XX,j);
 		gsl_vector_memcpy(xj, &column_j.vector);
 		gsl_vector_memcpy(Rxj, xj);
 
-		//print(R);
-		//print(Rxj);
 		My_dtrsv(CblasLower, CblasNoTrans, CblasNonUnit, R, Rxj);
 		gsl_vector_memcpy(z, Rxj);
 		double mvarn = My_ddot(Rxj, Rxj);
@@ -247,7 +246,6 @@ int minVol(const gsl_matrix* X,
 		
 		double mvarerror = mvarn - mvar; mvarerror = GSL_MAX(mvarerror,-mvarerror)/GSL_MAX(mvar,1.0);
 		if (mvarerror>SMALLE) {
-			//printf("%e %e\n",mvarn,mvar);
 			flag_recompute = 1;
 		}
 		mvar = mvarn;
@@ -297,7 +295,6 @@ int minVol(const gsl_matrix* X,
 		}  
 		if (flag_recompute) {
 			numRecomputes++;
-			//printf("%d\n",numRecomputes);
 			gsl_matrix_set_zero(M); getXUXT(XX,u,M,0);
 			gsl_matrix_set_zero(R); getChol(M,R); //now R holds the upper and lower triangular parts
 			factor = 1.0;
@@ -365,7 +362,7 @@ int minVol(const gsl_matrix* X,
 		
 	}
 	gsl_matrix_set_zero(M); 
-	getXUXT(XX,u,M,1); 
+	getXUXT(XX,u,M,1); print(M);
 	gsl_matrix_memcpy(M_out, M);
 	if (doPrint)
 		print(M);

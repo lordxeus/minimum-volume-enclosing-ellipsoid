@@ -10,7 +10,6 @@
 
 #include "BlasWrappers.h"
 #include "gsl/gsl_matrix.h"
-#include "gsl/gsl_permutation.h"
 #include "gsl/gsl_sort_vector.h"
 
 

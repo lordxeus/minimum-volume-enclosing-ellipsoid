@@ -279,8 +279,8 @@ int testMVEE()
 	gsl_rng_env_setup();
 	T = gsl_rng_default;
 	r = gsl_rng_alloc(T);
-	int n = 20;
-	int m = 10000;
+	int n = 50;
+	int m = 100000;
 	double tol = 0.0000001;
 	bool doPrint = false;
 	gsl_matrix* X = gsl_matrix_calloc(n,m);
