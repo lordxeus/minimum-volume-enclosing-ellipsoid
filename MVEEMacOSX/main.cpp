@@ -3,11 +3,11 @@
 #include <stdio.h>
 #include "MVEE.h"
 #include "MVEEPartial.h"
-#include <xercesc/util/PlatformUtils.hpp>
+//#include <xercesc/util/PlatformUtils.hpp>
 #include <vector>
 #include <numeric>
 
-using namespace xercesc;
+//using namespace xercesc;
 
 int testMVEEPartial()
 {
@@ -348,9 +348,9 @@ int main(int argc , char* argv[])
 {
 	//testMVEEPartial();
 	//testBadUposCase();
-	XMLPlatformUtils::Initialize();
+	//XMLPlatformUtils::Initialize();
 	testMVEE();
-	XMLPlatformUtils::Terminate();
+	//XMLPlatformUtils::Terminate();
 	//testMVEEPartialEID();
 	
 }
