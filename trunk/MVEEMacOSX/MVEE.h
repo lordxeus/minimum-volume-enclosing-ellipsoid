@@ -9,7 +9,7 @@
  */
 
 /*! The MVEE class represents a minimum volume ellipsoid problem
- and when it is solved its solution as well
+ and when it is solved, its solution as well
  */
 #include "minVolume.h"
 #include "gsl/gsl_combination.h"
@@ -44,9 +44,22 @@ public:
 	void printResults() const;
 	virtual void calculateOptimalValue();
 	
+	MVEE() {};
 	MVEE(gsl_matrix* XX);
 	MVEE(gsl_matrix* XX,const double& tol, const int& KKY, const int& maxit, const bool& doPrint);
 	~MVEE();
+};
+
+class MVEEGeneric: public MVEE
+{
+public:
+	
+	MVEE* mveeUpDimension;
+	MVEEGeneric(gsl_matrix* XX);
+	MVEEGeneric(gsl_matrix* XX,const double& tol, const int& KKY, const int& maxit, const bool& doPrint);
+	void moveUpDimension(gsl_matrix* XXnew, const gsl_matrix* XX);
+	virtual void solve();
+	//virtual void moveDownDimension();
 };
 
 #endif

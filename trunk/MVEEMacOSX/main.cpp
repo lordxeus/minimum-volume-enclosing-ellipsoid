@@ -3,9 +3,11 @@
 #include <stdio.h>
 #include "MVEE.h"
 #include "MVEEPartial.h"
-
+#include <xercesc/util/PlatformUtils.hpp>
 #include <vector>
 #include <numeric>
+
+using namespace xercesc;
 
 int testMVEEPartial()
 {
@@ -280,7 +282,7 @@ int testMVEE()
 	T = gsl_rng_default;
 	r = gsl_rng_alloc(T);
 	int n = 50;
-	int m = 100000;
+	int m = 1000;
 	double tol = 0.0000001;
 	bool doPrint = false;
 	gsl_matrix* X = gsl_matrix_calloc(n,m);
@@ -346,7 +348,9 @@ int main(int argc , char* argv[])
 {
 	//testMVEEPartial();
 	//testBadUposCase();
+	XMLPlatformUtils::Initialize();
 	testMVEE();
+	XMLPlatformUtils::Terminate();
 	//testMVEEPartialEID();
 	
 }

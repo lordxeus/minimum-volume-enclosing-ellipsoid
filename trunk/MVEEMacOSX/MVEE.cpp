@@ -80,6 +80,29 @@ void MVEE::calculateOptimalValue()
 void MVEE::get_u(gsl_vector* uu) const
 {
 	gsl_vector_memcpy(uu, u);
-};
+}
 
-void MVEE::set_doPrint(bool _doPrint) {doPrint = _doPrint;}
+void MVEE::set_doPrint(bool _doPrint) {
+	doPrint = _doPrint;
+}
+
+
+MVEEGeneric::MVEEGeneric(gsl_matrix* XX) {
+	gsl_matrix* XXnew = gsl_matrix_alloc(XX->size1, XX->size2);
+	moveUpDimension(XXnew,XX);
+	mveeUpDimension = new MVEE(XXnew);
+	gsl_matrix_free(XXnew);
+}
+
+MVEEGeneric::MVEEGeneric(gsl_matrix* XX,const double& tol, const int& KKY, const int& maxit, const bool& doPrint){
+	mveeUpDimension = new MVEE(XX, tol, KKY, maxit, doPrint);
+}
+
+void MVEEGeneric::moveUpDimension(gsl_matrix* XXnew, const gsl_matrix* XX) {
+// implment the Kachiyan shit
+}
+
+void MVEEGeneric::solve()
+{
+	mveeUpDimension->solve();
+}
